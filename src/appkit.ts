@@ -19,7 +19,8 @@ export function appkit() {
       description: "Farcaster Game",
       url: "https://example.org",
       icons: []
-    }
+    },
+    networks: []
   });
 
   return _appkit!;
