@@ -9,13 +9,14 @@ export function initFrame() {
     initialState: () =>
       post(
         image({
+          // Updated text in image URL to "GameLife" and fixed typo
           src:
-            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.adigeo.com%2Fen%2Fshopping%2Fgamelife%2F&psig=AOvVaw3v_CPP9VzIs7NsiesfkE8Y&ust=1764036556163000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOjJnbfaiZEDFQAAAAAdAAAAABAE",
+            "https://dummyimage.com/1200x630/111827/ffffff&text=GameLife%3A+Begin+Your+Journey",
           aspectRatio: "1.91:1"
         }),
-        text("Bounty of day: Pass and Claim!"),
+        text("Welcome to GameLife. Start your career?"),
         button({
-          label: "Open forms",
+          label: "Start Game", // Changed from "Open forms" to be more game-like
           onClick: ({ state }) => ({ ...state, open: true })
         })
       )
