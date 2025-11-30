@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GameChange / CastBounties 🎮
 
-## Getting Started
+> **GameChange** is a Web3-enabled Farcaster Frame application designed to host "Quests of the Day" and bounties. Users can interact directly through Farcaster to view quests, pass requirements, and claim rewards.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠️ Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project is built using a modern Web3 frontend stack:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Framework:** [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+* **Language:** [TypeScript](https://www.typescriptlang.org/)
+* **Farcaster Integration:** [`@farcaster/frame-sdk`](https://docs.farcaster.xyz/) for interactive Frames.
+* **Wallet & Auth:** [`@reown/appkit`](https://reown.com/) (formerly Web3Modal) for wallet connections.
+* **Blockchain Interaction:** [`wagmi`](https://wagmi.sh/) and [`viem`](https://viem.sh/).
+* **Account Abstraction:** [`@zerodev/sdk`](https://zerodev.app/) for smart wallet features.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Features
 
-To learn more about Next.js, take a look at the following resources:
+* **Interactive Frame:** A dedicated Farcaster Frame that displays the "Bounty of the day".
+* **Wallet Connection:** Integrated Reown AppKit (Project ID: `064...`) supporting WalletConnect.
+* **Smart Accounts:** Includes ZeroDev SDK dependencies for ECDSA validator and session key support.
+* **Quest System:** Logic to handle "Open forms" and claim flows directly within the frame context.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Getting Started
 
-## Deploy on Vercel
+Follow these steps to run the project locally.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Prerequisites
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Node.js & npm/yarn/pnpm
+
+### Installation
+
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/lucidartdev/gameLifechange.git](https://github.com/lucidartdev/gameLifechange.git)
+    cd gameLifechange
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for production**
+    ```bash
+    npm run build
+    ```
+
+---
+
+## 📂 Project Structure
+
+* **`src/appkit.ts`**: Configures the Reown AppKit with Wagmi adapters and metadata.
+* **`src/frame.ts`**: Initializes the Farcaster Frame logic, defining the initial image and button actions.
+* **`src/wagmi.ts`**: Sets up the Wagmi config and Viem public client for Ethereum Mainnet interaction.
+* **`src/main.tsx`**: Application entry point wrapping the App in QueryClientProvider.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any bugs or feature requests.
+
+---
+
+## 📝 License
+
+This project is private.
